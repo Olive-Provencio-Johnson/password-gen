@@ -15,6 +15,7 @@ function writePassword() {
 
 }
 
+
 function generatePassword() {
   var password = ''
   var tempCharacters = ''
@@ -88,7 +89,9 @@ function generatePassword() {
 
   }
 
-  
+  for (var i = 0; i < pwLength; i++) {
+    password += tempCharacters.charAt(Math.floor(Math.random() * tempCharacters.length))
+  }
 
   return password
 }
